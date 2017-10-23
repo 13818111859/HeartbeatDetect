@@ -31,7 +31,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
     int point_last = 0;
     float sum_avg = 0.0f;
 
-    final int  CURVE_LENGTH = 16;
+    final int  CURVE_LENGTH = 12;
     float[] curve = new float[CURVE_LENGTH];
 
     private  boolean mFlash = false;
@@ -118,7 +118,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
                 curve[CURVE_LENGTH - 1] = sum;
                 for (int k = 0;k < CURVE_LENGTH/2;k++)
                 {
-                    diff += (curve[k] - curve[ CURVE_LENGTH/2 - k]);
+                    diff += (curve[k] - curve[ CURVE_LENGTH -1 - k]);
                 }
                 diff /= (CURVE_LENGTH / 2);
 
