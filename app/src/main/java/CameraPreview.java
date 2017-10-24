@@ -23,7 +23,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
     private PreviewCallback mPreviewCallback = new PreviewCallback();
 
     float factor = 0.96f;
-    float thr = 0.05f;
+    float thr = 0.6f;
     int sign_last = 1;
     int sign = 1;
     float sign_count = 0f;
